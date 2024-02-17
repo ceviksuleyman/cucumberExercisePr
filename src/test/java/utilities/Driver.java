@@ -31,24 +31,20 @@ public class Driver {
                 case "chrome":
                     chromeOptions = new ChromeOptions();
                     chromeOptions.setPageLoadStrategy(PageLoadStrategy.NORMAL);
-//                    co.setPageLoadTimeout(duration);
                     chromeOptions.setImplicitWaitTimeout(duration);
                     driver = new ChromeDriver(chromeOptions);
                     break;
                 case "edge":
                     EdgeOptions edgeOptions = new EdgeOptions();
-//                    eo.setPageLoadTimeout(duration);
                     edgeOptions.setImplicitWaitTimeout(duration);
                     driver = new EdgeDriver(edgeOptions);
                     break;
                 case "firefox":
                     FirefoxOptions firefoxOptions = new FirefoxOptions();
-                    //fo.addArguments("-headless");
                     firefoxOptions.setImplicitWaitTimeout(duration);
                     driver = new FirefoxDriver(firefoxOptions);
                 default:
                     chromeOptions = new ChromeOptions();
-//                    co.setPageLoadTimeout(duration);
                     chromeOptions.setImplicitWaitTimeout(duration);
                     driver = new ChromeDriver(chromeOptions.addArguments("--headless=new"));
                     break;
